@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+.navbar-brand img {width:250px;}
+
+.responsive-text {
+  font-size: clamp(14px, 2vw, 20px);
+}
+border-container {
+  position: relative; /* чтобы позиционировать внутри */
+}
+.page-wrapper {
+  display: flex;
+  justify-content: center; /* по горизонтали */
+  align-items: center;     /* по вертикали */
+  
+}
+.corner-image {
+  position: absolute;
+  bottom: 10px; /* отступ снизу */
+  right: 10px; /* отступ справа */
+  max-width: 15%; /* адаптивный размер, можно изменить */
+  height: auto; /* сохраняет пропорции */
+}
+
+.lines-container {
+  display: flex;
+  justify-content: center; /* по желанию */
+  gap: 40px; /* расстояние между линиями */
+}
+
+/* Для мобильных устройств — в столбик */
+@media (max-width: 600px) {
+  .lines-container {
+    flex-direction: column; /* вертикальный стек */
+    align-items: center; /* центрировать по горизонтали */
+    gap: 20px; /* расстояние между линиями в столбик */
+  }
+}
+
+.line-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* по центру */
+}
+
+.label {
+    color: gray;
+  margin-bottom: 8px; /* отступ между надписью и линией */
+  font-weight: lighter; /* стиль текста, по желанию */
+}
+
+.line {
+  height: 2px;
+  background-color: #000;
+  width: 400px; /* или задайте конкретную ширину */
+  max-width: 300px; /* максимально допустимая длина */
+}
